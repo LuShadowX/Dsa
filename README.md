@@ -6,6 +6,7 @@ A systematic collection of optimized solutions and architectural patterns for co
 ## 🗺️ Archive Roadmap:-
 - [x] **LinkedLists** - Pointer synchronization and traversal.
 - [x] **Arrays** - Linear data manipulation and carry propagation.
+- [x] **Graphs** - Breadth First Search.
 
 
 ## 🛠️ Environment
