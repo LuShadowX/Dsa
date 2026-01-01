@@ -2,7 +2,7 @@
  * @file intersection_y_list.cpp
  * @author LuShadowX
  * @brief Find the intersection point of two Y-shaped Linked Lists.
- * * @problem_link: https://www.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1
+ * * @problem_link:https://www.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1
  * @difficulty: Medium (Rank A)
  * @tags: Linked List, Two Pointers, Memory Synchronization
  * * @logic: Synchronizing the travel distance of two pointers by switching heads.

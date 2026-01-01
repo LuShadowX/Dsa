@@ -1,0 +1,20 @@
+# Ignore executables (files without extensions on Mac/Linux)
+* 
+# * : Tells Git to ignore everything.
+!*/
+# !*/ : Exception—Don't ignore folders (we want to go inside them).
+!*.*
+# !*.* : Exception—Don't ignore files that have an extension (like .cpp, .h, .md).
+#Since the compiled executable intersection_y_list has no extension, Git will now ignore it, but it will keep your .cpp file.
+
+# Ignore specific compiled outputs
+*.o
+*.out
+*.exe
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore build folders
+build/
+bin/
