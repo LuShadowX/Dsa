@@ -8,7 +8,7 @@
  * If a digit is 9, it becomes 0 and the carry moves left.
  */
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 class Solution {
@@ -41,7 +41,7 @@ public:
     }
 };
 
-// --- TEST BENCH ---
+
 int main() {
     Solution sol;
     
