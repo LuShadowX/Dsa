@@ -1,11 +1,19 @@
-# 🏛️ The White Room: DSA Archives
-**Architect:** Lakshya Supyal (LuShadowX)
+# 🔗 Linked List Archives
 
-Welcome to the central repository for algorithm reconstruction and data structure optimization. This project is a systematic record of competitive programming.
+Focus: Memory management, linear traversal, and efficient pointer synchronization.
 
-## 🗺️ Roadmap
-- [x] **LinkedLists** - Pointer manipulation & synchronization patterns.
+## ⚔️ The Kill List
 
+| Rank | Problem | Source | Logic | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **A** | **Y-Shaped Intersection** | [GFG](https://www.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1) | Two-Pointer Time Warp | ✅ Killed |
 
-## 🛠️ Tech Stack
-- **Language:** C++17
+---
+
+### 🛡️ Core Logic: The Two-Pointer Time Warp
+To find the intersection point of two lists of lengths $L_1$ and $L_2$ without knowing their lengths:
+1. Initialize `ptr1` at `head1` and `ptr2` at `head2`.
+2. When a pointer reaches `NULL`, teleport it to the head of the *opposite* list.
+3. This guarantees both pointers travel exactly $a + c + b$ distance, where $c$ is the common part.
+   - **Math:** $a + c + b = b + c + a$
+   - **Complexity:** $O(N+M)$ Time | $O(1)$ Space
