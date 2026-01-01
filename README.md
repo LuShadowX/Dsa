@@ -1,11 +1,12 @@
-# 🏛️ The DSA Archives:
-**Architect:** Lakshya Supyal (LuShadowX)
+# 🏛️ Data Structures & Algorithms Archives
+**Developer:** LuShadowX
 
-Welcome to the central repository for algorithm reconstruction and data structure optimization. This project is a systematic record of competitive programming.
+A systematic collection of optimized solutions and architectural patterns for complex problem-solving.
 
-## 🗺️ Roadmap
-1:Linked list
+## 🗺️ Archive Roadmap
+- [x] **LinkedLists** - Pointer synchronization and traversal.
+- [x] **Arrays** - Linear data manipulation and carry propagation.
 
 
-## 🛠️ Tech Stack
+## 🛠️ Environment
 - **Language:** C++17
