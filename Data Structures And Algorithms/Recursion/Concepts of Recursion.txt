@@ -285,4 +285,4 @@ Imagine you are in a massive maze. You reach a fork in the road: Left or Right?
 
     What do you do? You don't just give up and stay there. You go back to the fork and try going Right.
 
-Backtracking is a refined form of recursion. It explores all possible paths, but the moment it realizes a path cannot lead to a solution, it backtracks (erases its last step) and tries the next possibility.
+Backtracking is a refined form of recursion. It explores all possible paths, but the moment it realizes a path cannot lead to a solution, it backtracks and tries the next possibility.
