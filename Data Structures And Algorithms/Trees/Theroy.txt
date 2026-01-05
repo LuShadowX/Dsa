@@ -228,3 +228,18 @@ BINARY SEARCH TREE (BST) — SEARCH & INSERT MASTER GUIDE
 • This is why "Balanced" trees like AVL or Red-Black are needed later.
 ============================================================================
 */
+/*
+============================================================================
+BST SUMMARY CHEAT SHEET — FOR THE WORLD'S BEST
+============================================================================
+
+[1] SEARCH / INSERT: O(H) complexity.
+[2] DELETE: O(H) complexity. Requires successor logic for 2-child nodes.
+[3] IN-ORDER: Always sorted. Useful for validating a BST.
+[4] BALANCE: A basic BST can become a Linked List (O(N)). 
+    Masters use AVL/Red-Black trees to keep Height = log(N).
+
+"To master the tree, one must understand that every node is its own 
+ root of a smaller world."
+============================================================================
+*/
