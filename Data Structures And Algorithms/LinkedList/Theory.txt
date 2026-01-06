@@ -1,0 +1,137 @@
+What is a Linked List? (The Non-Linear Memory)
+In an Array, all elements are forced to sit together in memory (contiguously). If you want to add an element in the middle, you have to push everyone else back. It's exhausting (O(N)).
+In a Linked List, elements (called Nodes) can be anywhere in your computer's memory. They stay connected because each node carries a "map" (a pointer) to the next node.
+A node in C++ is a struct or class with two parts:
+Data: The value you want to store (int, string, etc.).
+
+Next: A pointer that stores the address of the next node.
+
+struct Node {
+    int data;
+    Node* next;
+
+    Node(int val) {
+        data = val;
+        next = nullptr; // Initially, it points to nothing
+    }
+};
+Excellent choice. To be the best in the world, you must understand that while Arrays are like a solid block of stone, a Linked List is like a chain of diamonds. You can add or remove links anywhere without moving the whole chain.
+
+Let’s dismantle this concept and rebuild it in your mind.
+1. What is a Linked List? (The Non-Linear Memory)
+
+In an Array, all elements are forced to sit together in memory (contiguously). If you want to add an element in the middle, you have to push everyone else back. It's exhausting (O(N)).
+
+In a Linked List, elements (called Nodes) can be anywhere in your computer's memory. They stay connected because each node carries a "map" (a pointer) to the next node.
+Anatomy of a Node:
+
+A node in C++ is a struct or class with two parts:
+
+    Data: The value you want to store (int, string, etc.).
+
+    Next: A pointer that stores the address of the next node.
+
+C++
+
+struct Node {
+    int data;
+    Node* next;
+
+    Node(int val) {
+        data = val;
+        next = nullptr; // Initially, it points to nothing
+    }
+};
+
+2. The Three Flavors of Linked Lists
+I. Singly Linked List (The One-Way Street)
+Each node points only to the next node.
+
+You can only move forward. If you pass a node, you can't go back unless you start over from the Head.
+Doubly Linked List (The Two-Way Highway)
+Each node has two pointers: next and prev.
+
+Power: You can traverse forward and backward.
+
+Cost: It uses more memory (an extra pointer per node).
+
+Circular Linked List (The Infinite Loop)
+The last node’s next pointer points back to the Head instead of NULL.
+
+Usage: Great for things like multiplayer games where turns go in a circle.
+Feature	Array	Linked List
+Size	Fixed (Static)	Dynamic (Grows at runtime)
+Insertion at Start	O(N) (Everyone must shift)	O(1) (Just change 1 pointer)
+Search	O(1) if you know index	O(N) (Must walk the chain)
+Memory	No extra space	Extra space for pointers
+
+Master's Manual: Linked List Operations
+A. Insertion at the Head (The O(1) Kill)
+
+    Create a new node.
+
+    Point the new node's next to the current Head.
+
+    Update the Head to be your new node.
+
+B. Traversal (Walking the Chain)
+
+You start at the Head and keep moving until you hit NULL.
+void printList(Node* head) {
+    Node* temp = head;
+    while (temp != nullptr) {
+        cout << temp->data << " -> ";
+        temp = temp->next; // Move to the next "link"
+    }
+    cout << "NULL" << endl;
+}
+/*
+============================================================================
+LINKED LIST — THE DYNAMIC CHAIN MASTER GUIDE
+============================================================================
+
+[1] THE HEAD AND THE TAIL
+-------------------------
+• HEAD: The entry point. If you lose the Head, you lose the whole list.
+• TAIL: The last node (points to NULL).
+
+[2] THE DYNAMIC ADVANTAGE
+-------------------------
+• Unlike arrays, we don't need a "continuous block" of memory. 
+• We can insert/delete in O(1) if we are already at the position.
+
+[3] THE POINTER RULE
+--------------------
+• Always update the "Next" pointer of the NEW node BEFORE updating 
+  the pointer of the PREVIOUS node. (Otherwise, you break the chain!)
+
+[4] COMMON PITFALLS
+-------------------
+• Memory Leaks: Forgetting to 'delete' a node after removing it.
+• Segment Faults: Trying to access 'temp->next' when 'temp' is NULL.
+============================================================================
+*/
+Step Two: Basic Operations (The CRUD of Lists)
+
+Before we do fancy tricks, you must be able to Create, Read, and Update the list perfectly.
+I. Traversal (The "Walk")
+
+To visit every node, we use a temp pointer. Elite Rule: Never move the head pointer itself, or you will lose the start of your list forever!
+void printList(Node* head) {
+    Node* temp = head; // Start at the head
+    while (temp != nullptr) {
+        cout << temp->data << " -> ";
+        temp = temp->next; // Jump to the next address
+    }
+    cout << "NULL" << endl;
+}
+nsertion at the Head (The O(1) Speed)
+
+This is the fastest operation in a Linked List.
+
+    Create a new node.
+
+    New node's next points to the current head.
+
+    Update head to be the new node.
+    
