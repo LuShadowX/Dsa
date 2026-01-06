@@ -1,0 +1,22 @@
+1. The Stack (LIFO: Last-In, First-Out)
+
+Think of a stack of plates. You add to the top, and you take from the top.
+
+    Key Operations: push(x), pop(), top(), isEmpty(). All are O(1).
+
+    Implementation: * Array: Uses a top index. If top == size-1, it's Overflow.
+
+        Linked List: Push/Pop at the Head to keep it O(1).
+The "Master Trick": Monotonic Stack
+
+This is used for "Next Greater Element" (NGE).
+
+Logic:
+
+    Traverse array from Right to Left.
+
+    While stack.top() <= current_element, Pop. (Small elements are useless).
+
+    NGE is stack.top() (or -1 if empty).
+
+    Push current element.

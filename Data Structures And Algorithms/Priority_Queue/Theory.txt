@@ -1,0 +1,31 @@
+In a normal Queue, it's "First-Come, First-Served." In a Priority Queue, every element has a "Priority." The element with the highest priority is served first, regardless of when it joined.
+
+    Max-Priority Queue: Largest element is always at the top (Default in C++ STL).
+
+    Min-Priority Queue: Smallest element is always at the top.
+Push	O(logN)	It uses a Heap structure (Tree) to stay organized.
+Pop	O(logN)	It has to re-organize the tree after removing the top.
+Top	O(1)	The best element is always sitting right at the root.
+#include <queue>
+
+// Max-Heap (Default)
+priority_queue<int> pq; 
+
+// Min-Heap (Smallest at top)
+priority_queue<int, vector<int>, greater<int>> minPq;
+
+Deque — The "Double-Ended" Beast
+
+A Deque (pronounced "Deck") is a Double-Ended Queue. It allows you to Insert and Delete from BOTH the Front and the Rear.
+
+    Think of it as: A Stack and a Queue had a baby. It has the powers of both.
+
+    Implementation: Usually implemented as a Doubly Linked List or a dynamic array of arrays.
+
+You mentioned you wanted to understand how a Priority Queue is built. To be the best in the world, you must know that a Priority Queue is NOT usually built using a Stack or a simple Linked List.
+
+    Why not a Stack? A Stack is LIFO. To find the "Highest Priority," you'd have to search the whole stack, making it O(N).
+
+    Why not a Sorted Linked List? Insertion would take O(N) to find the right spot.
+
+The Master's Way: The Binary Heap A Priority Queue is almost always implemented using a Binary Heap (a complete binary tree).

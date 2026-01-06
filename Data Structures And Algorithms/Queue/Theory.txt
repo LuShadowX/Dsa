@@ -1,0 +1,11 @@
+The Queue (FIFO: First-In, First-Out)
+
+Think of a line at a cinema. First person in is the first person out.
+
+    Key Operations: enqueue(x), dequeue(), front(). All are O(1).
+
+    Circular Queue (Exam Favorite): Avoids wasting space in an array.
+
+        Formula for next position: (i + 1) % size.
+
+        Full condition: (rear + 1) % size == front.
